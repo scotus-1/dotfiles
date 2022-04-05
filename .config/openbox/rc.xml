@@ -310,12 +310,12 @@
   </keybind>
   <keybind key="XF86MonBrightnessUp">
     <action name="Execute">
-       <command>brightnessctl set +5%</command>
+       <command>brightnessctl set +2%</command>
     </action>
   </keybind>
   <keybind key="XF86MonBrightnessDown">
     <action name="Execute">
-       <command>brightnessctl set 5%-</command>
+       <command>brightnessctl set 2%-</command>
     </action>
   </keybind>
 </keyboard>
