@@ -11,6 +11,10 @@ applications + dependencies (install with aur helper)
 - thefuck
 - xorg-server
 - zsh
+- secret-service
+- bottom
+- brightnessctl
+- visual-studio-code-bin
 
 other installations:
  - oh-my-zsh
