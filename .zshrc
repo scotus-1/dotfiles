@@ -6,3 +6,5 @@ SAVEHIST=1000
 PROMPT="%n@%m %~$ "
 
 eval $(thefuck --alias)
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles_git --work-tree=$HOME'
+alias ..='cd ..'
