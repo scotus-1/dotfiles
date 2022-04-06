@@ -17,6 +17,10 @@ applications + dependencies (install with aur helper)
 - visual-studio-code-bin
 - nano-syntax-highlighting
 - neofetch
+- discord
+- protonvpn
+- redshift
+- bat, exa, fd, cheat
 
 other installations:
  - oh-my-zsh
