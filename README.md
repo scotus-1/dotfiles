@@ -23,6 +23,7 @@ applications + dependencies (install with aur helper)
 - bat, exa, fd, cheat
 - alsa-utils
 - pulseaudio, pulseaudio-alsa
+- polybar
 
 other installations:
  - oh-my-zsh
