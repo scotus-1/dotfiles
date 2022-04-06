@@ -16,6 +16,7 @@ applications + dependencies (install with aur helper)
 - brightnessctl
 - visual-studio-code-bin
 - nano-syntax-highlighting
+- neofetch
 
 other installations:
  - oh-my-zsh
