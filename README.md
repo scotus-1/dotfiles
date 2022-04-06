@@ -21,3 +21,4 @@ other installations:
     - zsh-autosuggestions
     - zsh-completions
     - zsh-syntax-highlighting
+    - powerline10k
