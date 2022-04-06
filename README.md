@@ -15,6 +15,7 @@ applications + dependencies (install with aur helper)
 - bottom
 - brightnessctl
 - visual-studio-code-bin
+- nano-syntax-highlighting
 
 other installations:
  - oh-my-zsh
@@ -22,3 +23,4 @@ other installations:
     - zsh-completions
     - zsh-syntax-highlighting
     - powerline10k
+ - toipe (cargo)
