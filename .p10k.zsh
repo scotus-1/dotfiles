@@ -98,7 +98,7 @@
     # vpn_ip                # virtual private network indicator
     # load                  # CPU load
     # disk_usage            # disk usage
-    # ram                   # free RAM
+    ram                   # free RAM
     # swap                  # used swap
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
@@ -110,7 +110,7 @@
     # public_ip             # public IP address
     # proxy                 # system-wide http/https/ftp proxy
     battery               # internal battery
-    # wifi                  # wifi speed
+    wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
   )
 

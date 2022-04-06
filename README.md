@@ -21,6 +21,8 @@ applications + dependencies (install with aur helper)
 - protonvpn
 - redshift
 - bat, exa, fd, cheat
+- alsa-utils
+- pulseaudio, pulseaudio-alsa
 
 other installations:
  - oh-my-zsh
