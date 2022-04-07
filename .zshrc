@@ -116,5 +116,5 @@ alias ..='cd ..'
 
 alias cat=bat
 alias ls=exa
-alias fd=find
+alias find=fd
 alias ping=gping

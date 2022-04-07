@@ -16,19 +16,19 @@ weather_condition=`http GET http://api.openweathermap.org/data/2.5/weather zip==
 
 case $weather_condition in
     "Clear" | "Snow")
-        wallpaper_path=~/.wallpapers/clear
+        wallpaper_name=clear
         ;;
     "Thunderstorm" | "Drizzle" | "Rain")
-        wallpaper_path=~/.wallpapers/rainy
+        wallpaper_name=rainy
         ;;
     "Clouds" | "Atmosphere")
-        wallpaper_path=~/.wallpapers/cloudy
+        wallpaper_name=cloudy
         ;;
     *)
-        wallpaper_path=~/.wallpapers
+        wallpaper_name=
         ;;
 esac
 
 
-wallpaper_path="${wallpaper_path}_${time}"
-echo $wallpaper_path
+wallpaper_name="${wallpaper_name}_${time}"
+echo `fd $wallpaper_name`
