@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+hour=`date +%H`
+if [[ $hour -le 6 || $hour -ge 18 ]]; then
+    time='night'
+elif [[ $hour -gt 6 && $hour -lt 12 ]]; then
+    time='morning'
+elif [[ $hour -ge 12 && $hour -lt 18 ]]; then
+    time='afternoon' 
+fi
+
+
+ZIPCODE=$1
+OWM_APIKEY=$2
+weather_condition=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
+
+case $weather_condition in
+    "Clear" | "Snow")
+        wallpaper_path=~/.wallpapers/clear
+        ;;
+    "Thunderstorm" | "Drizzle" | "Rain")
+        wallpaper_path=~/.wallpapers/rainy
+        ;;
+    "Clouds" | "Atmosphere")
+        wallpaper_path=~/.wallpapers/cloudy
+        ;;
+    *)
+        wallpaper_path=~/.wallpapers
+        ;;
+esac
+
+
+wallpaper_path="${wallpaper_path}_${time}"
+echo $wallpaper_path
