@@ -11,7 +11,7 @@ applications + dependencies (install with aur helper)
 - thefuck
 - xorg-server
 - zsh
-- secret-service
+- gnome-keyring
 - bottom
 - brightnessctl
 - visual-studio-code-bin
@@ -24,6 +24,8 @@ applications + dependencies (install with aur helper)
 - alsa-utils
 - pulseaudio, pulseaudio-alsa
 - polybar
+- jq, httpie
+- feh
 
 other installations:
  - oh-my-zsh
