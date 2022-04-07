@@ -12,7 +12,23 @@ fi
 
 ZIPCODE=$1
 OWM_APIKEY=$2
+
 weather_condition=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
+
+
+if [ -f "/tmp/last_weather_condition" ]; then
+    if [ $weather_condition == $(cat /tmp/last_weather_condition) ]; then 
+        if [[ $hour -ne 6 && $hour -ne 12 && $hour -ne 18 ]]; then
+            exit
+        else
+            if [ $(date +%M) -gt 20 ]; then
+                exit
+            fi
+        fi
+    fi
+fi
+echo $weather_condition > /tmp/last_weather_condition
+
 
 case $weather_condition in
     "Clear" | "Snow")
@@ -25,10 +41,12 @@ case $weather_condition in
         wallpaper_name=cloudy
         ;;
     *)
-        wallpaper_name=
+        wallpaper_name=''
         ;;
 esac
 
 
 wallpaper_name="${wallpaper_name}_${time}"
-echo `fd $wallpaper_name`
+wallpapers=( $(fd $wallpaper_name ~/.wallpapers) )
+wallpaper=${wallpapers[RANDOM%${#wallpapers[@]}]}
+feh --bg-scale --no-fehbg $wallpaper 

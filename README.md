@@ -26,6 +26,8 @@ applications + dependencies (install with aur helper)
 - polybar
 - jq, httpie
 - feh
+- cronie
+    - `*/15 * * * * ~/.scripts/set-wallpaper`
 
 other installations:
  - oh-my-zsh
@@ -34,3 +36,8 @@ other installations:
     - zsh-syntax-highlighting
     - powerline10k
  - toipe (cargo)
+
+
+.uservar (secret env variables)
+    - $OWM_API_KEY
+    - $ZIP_CODE_COUNTRY_CODE
