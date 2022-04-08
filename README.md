@@ -18,7 +18,6 @@ applications + dependencies (install with aur helper)
 - nano-syntax-highlighting
 - neofetch
 - discord
-- protonvpn
 - redshift
 - bat, exa, fd, cheat
 - alsa-utils
@@ -36,7 +35,7 @@ other installations:
     - zsh-syntax-highlighting
     - powerline10k
  - toipe (cargo)
-
+ - tor-browser (from site)
 
 .uservar (secret env variables)
 - $OWM_API_KEY
