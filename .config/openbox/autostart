@@ -15,6 +15,5 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
-source ~/.uservar &
 redshift -O 4500 &
 ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY

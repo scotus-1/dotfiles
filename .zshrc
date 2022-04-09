@@ -115,6 +115,8 @@ alias ..='cd ..'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias cat=bat
-alias ls=exa
+alias ls="exa -lah --group-directories-first"
 alias find=fd
 alias ping=gping
+alias rm="rm -i"
+alias mv="mv -i"

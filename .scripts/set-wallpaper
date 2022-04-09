@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+exec >/tmp/wallpaper.log 2>&1
 
 hour=`date +%H`
 if [[ $hour -le 6 || $hour -ge 18 ]]; then
@@ -14,14 +15,16 @@ ZIPCODE=$1
 OWM_APIKEY=$2
 
 weather_condition=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
-
+echo "Fetched current weather condition (ul means error): $weather_condition"
 
 if [ -f "/tmp/last_weather_condition" ]; then
     if [ $weather_condition == $(cat /tmp/last_weather_condition) ]; then 
         if [[ $hour -ne 6 && $hour -ne 12 && $hour -ne 18 ]]; then
+            echo "Same weather condition as last 15 minutes, exiting"
             exit
         else
             if [ $(date +%M) -gt 20 ]; then
+                echo "Current in transition hour but past 20 miutes and same weather condition, exiting"
                 exit
             fi
         fi
@@ -47,6 +50,8 @@ esac
 
 
 wallpaper_name="${wallpaper_name}_${time}"
+echo "Wallpaper match: $wallpaper_name"
 wallpapers=( $(fd $wallpaper_name ~/.wallpapers) )
 wallpaper=${wallpapers[RANDOM%${#wallpapers[@]}]}
-feh --bg-scale --no-fehbg $wallpaper 
+echo "Wallpaper: $wallpaper"
+feh --bg-scale --no-fehbg -g 1920x1080 $wallpaper 
