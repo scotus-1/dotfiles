@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 exec >/tmp/wallpaper.log 2>&1
 
-hour=`date +%H`
+hour=`date +%-H`
+echo $hour
 if [[ $hour -le 6 || $hour -ge 18 ]]; then
     time='night'
 elif [[ $hour -gt 6 && $hour -lt 12 ]]; then
@@ -9,7 +10,6 @@ elif [[ $hour -gt 6 && $hour -lt 12 ]]; then
 elif [[ $hour -ge 12 && $hour -lt 18 ]]; then
     time='afternoon' 
 fi
-
 
 ZIPCODE=$1
 OWM_APIKEY=$2

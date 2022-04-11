@@ -120,3 +120,4 @@ alias find=fd
 alias ping=gping
 alias rm="rm -i"
 alias mv="mv -i"
+export gh="https://github.com"

@@ -27,7 +27,13 @@ applications + dependencies (install with aur helper)
 - feh
 - cronie
     - `*/15 * * * * ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_API_KEY`
-
+- gimp
+- onefetch
+- noto-fonts, noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+- youtube-dl
+- tetrio
+- lua
+- arch-wiki-docs arch-wiki-lite dialog 
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
