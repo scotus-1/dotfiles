@@ -2,7 +2,7 @@
 exec >/tmp/wallpaper.log 2>&1
 
 hour=`date +%-H`
-echo $hour
+echo `date +%-H:+%-M`
 if [[ $hour -le 6 || $hour -ge 18 ]]; then
     time='night'
 elif [[ $hour -gt 6 && $hour -lt 12 ]]; then
@@ -14,21 +14,40 @@ fi
 ZIPCODE=$1
 OWM_APIKEY=$2
 
-weather_condition=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
-echo "Fetched current weather condition (ul means error): $weather_condition"
+response=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY`
+echo "RESP: $response"
+weather_condition=`echo $response | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
+echo "Fetched current weather condition (ul or blank means error): $weather_condition"
+if [[ $weather_condition == 'ul' || $response == '' ]]; then
+    echo "Error in weather request, weather_condition is now set to empty string"
+    weather_condition=''
+fi
 
-if [ -f "/tmp/last_weather_condition" ]; then
+
+
+if [[ -f "/tmp/last_weather_condition" && $weather_condition == '' ]]; then
+    weather_condition=`cat /tmp/last_weather_condition`
+    echo "Found previous weather_condition, and error in request, setting weather_condition to previous: $weather_condition "
+
+fi
+
+if [[ -f "/tmp/last_weather_condition" && $weather_condition != '' ]]; then
     if [ $weather_condition == $(cat /tmp/last_weather_condition) ]; then 
         if [[ $hour -ne 6 && $hour -ne 12 && $hour -ne 18 ]]; then
             echo "Same weather condition as last 15 minutes, exiting"
             exit
         else
             if [ $(date +%M) -gt 20 ]; then
-                echo "Current in transition hour but past 20 miutes and same weather condition, exiting"
+                echo "Current in transition hour but past 20 minutes and same weather condition, exiting"
                 exit
             fi
         fi
     fi
+fi
+
+if [[ ! -f "/tmp/last_weather_condition" && $weather_condition == '' ]]; then
+    echo "No last weather condition exists, creating with undefined because of fetch erro"
+    weather_condition='undefined'
 fi
 echo $weather_condition > /tmp/last_weather_condition
 
@@ -54,5 +73,6 @@ echo "Wallpaper match: $wallpaper_name"
 wallpapers=( $(fd $wallpaper_name ~/.wallpapers) )
 wallpaper=${wallpapers[RANDOM%${#wallpapers[@]}]}
 echo "Wallpaper: $wallpaper"
+echo "Display: $DISPLAY"
 feh --bg-scale --no-fehbg -g 1920x1080 $wallpaper 
 betterlockscreen -u $wallpaper --fx blur  --blur 1
