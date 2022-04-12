@@ -3,6 +3,7 @@ applications + dependencies (install with aur helper)
 - firefox
 - lightdm
 - lightdm-webkit-theme-aether
+    - `sudo cp -r ~/.wallpapers /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers`
 - openbox
 - openssh
 - ttf-dejavu
@@ -34,6 +35,10 @@ applications + dependencies (install with aur helper)
 - tetrio
 - lua
 - arch-wiki-docs arch-wiki-lite dialog 
+- xorg-xrandr psmisc xorg-xrdb
+- imagemagick
+- betterlockscreen
+    - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
