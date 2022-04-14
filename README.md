@@ -39,6 +39,9 @@ applications + dependencies (install with aur helper)
 - imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
+- cbonsai
+
+
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -51,3 +54,34 @@ other installations:
 .uservar (secret env variables)
 - $OWM_API_KEY
 - $ZIP_CODE_COUNTRY_CODE
+
+todo:
+- [x] Display Server - Xorg
+- [ ] Window Compositor - picom (fork? jonaburg)
+- [x] Display Manager - lightdm + aether
+- [x] Screen Locker - betterlockscreen
+    - [ ] more i3lock-color options?
+- [ ] Application Launcher - rofi
+- [ ] Notification Launcher - dunst
+- [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils
+    - [ ] connect to notifications
+- [x] Backlight control - brightnessctl, redshift
+    - [ ] connect to notifications
+- [ ] Media control - (mpd, mpv, vlc ?????? playerctl?)
+- [ ] Panel/bar - polybar
+- [ ] Polkit - ???
+- [ ] Power Management - ???
+- [ ] Screen capture - ???
+- [ ] Clipboard Management - ???
+- [x] Wallpaper Setter - feh
+    - [x] React to weather and time
+- [ ] Logout Dialogue - ???
+- [ ] Default Applications
+    - [x] IDE - VS Code
+    - [x] Term - Alacritty + zsh + oh-my-zsh
+    - [x] File Manager - ???
+    - [x] Photo Editor - gimp
+- [ ] Sidebar Widgets - eww
+- [x] Window Manager - openbox
+    - [ ] Themeing
+    - [ ] Other configurations (keybinds, applications, rc.xml)
