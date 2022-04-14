@@ -86,3 +86,4 @@ todo:
 - [x] Window Manager - openbox
     - [ ] Themeing
     - [ ] Other configurations (keybinds, applications, rc.xml)
+    - [ ] Menu - (obmenu-generator?)

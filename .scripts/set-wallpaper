@@ -74,5 +74,7 @@ wallpapers=( $(fd $wallpaper_name ~/.wallpapers) )
 wallpaper=${wallpapers[RANDOM%${#wallpapers[@]}]}
 echo "Wallpaper: $wallpaper"
 echo "Display: $DISPLAY"
-feh --bg-scale --no-fehbg -g 1920x1080 $wallpaper 
-betterlockscreen -u $wallpaper --fx blur  --blur 1
+feh --bg-scale --no-fehbg -g 1920x1080 $wallpaper
+if [ $DISPLAY != ':0' ]; then 
+    betterlockscreen -u $wallpaper --fx blur  --blur 1
+fi
