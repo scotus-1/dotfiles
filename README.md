@@ -81,6 +81,7 @@ todo:
     - [x] Term - Alacritty + zsh + oh-my-zsh
     - [ ] File Manager - ???
     - [x] Photo Editor - gimp
+    - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
 - [x] Window Manager - openbox
     - [ ] Themeing
