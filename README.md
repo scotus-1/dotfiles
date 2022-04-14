@@ -62,7 +62,7 @@ todo:
 - [x] Screen Locker - betterlockscreen
     - [ ] more i3lock-color options?
 - [ ] Application Launcher - rofi
-- [ ] Notification Launcher - dunst
+- [ ] Notification Daemon - dunst
 - [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils
     - [ ] connect to notifications
 - [x] Backlight control - brightnessctl, redshift

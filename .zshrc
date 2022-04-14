@@ -126,4 +126,4 @@ alias hibernate="systemctl hibernate"
 alias sleep="systemctl suspend"
 alias restart="sudo reboot now"
 alias shutdown="shutdown now"
-
+export GPG_TTY=$(tty)
