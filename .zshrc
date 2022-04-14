@@ -28,7 +28,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -124,5 +124,6 @@ export gh="https://github.com"
 alias lock="betterlockscreen --lock blur"
 alias hibernate="systemctl hibernate"
 alias sleep="systemctl suspend"
-alias reboot="sudo reboot now"
+alias restart="sudo reboot now"
 alias shutdown="shutdown now"
+
