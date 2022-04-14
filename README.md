@@ -79,7 +79,7 @@ todo:
 - [ ] Default Applications
     - [x] IDE - VS Code
     - [x] Term - Alacritty + zsh + oh-my-zsh
-    - [x] File Manager - ???
+    - [ ] File Manager - ???
     - [x] Photo Editor - gimp
 - [ ] Sidebar Widgets - eww
 - [x] Window Manager - openbox
