@@ -27,7 +27,7 @@ applications + dependencies (install with aur helper)
 - jq, httpie
 - feh
 - cronie
-    - `*/15 * * * * ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY`
+    - `*/15 * * * * source ~/.uservar && ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY`
 - gimp
 - onefetch
 - noto-fonts, noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
