@@ -41,6 +41,7 @@ applications + dependencies (install with aur helper)
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
 - cbonsai
 - unzip
+- lxpolkit-gtk3, polkit
 
 other installations:
  - oh-my-zsh
@@ -69,7 +70,7 @@ todo:
     - [ ] connect to notifications
 - [ ] Media control - (mpd, mpv, vlc ?????? playerctl?)
 - [ ] Panel/bar - polybar
-- [ ] Polkit - ???
+- [x] Polkit - lxpolkit-gtk3
 - [ ] Power Management - ???
 - [ ] Screen capture - ???
 - [ ] Clipboard Management - ???
