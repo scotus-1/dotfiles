@@ -13,7 +13,8 @@ fi
 
 ZIPCODE=$1
 OWM_APIKEY=$2
-
+echo "ZIPCODE: $1"
+echo "OWM_APIKEY: $2"
 response=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY`
 echo "RESP: $response"
 weather_condition=`echo $response | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`

@@ -40,7 +40,7 @@ applications + dependencies (install with aur helper)
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
 - cbonsai
-
+- unzip
 
 other installations:
  - oh-my-zsh
@@ -84,6 +84,6 @@ todo:
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
 - [x] Window Manager - openbox
-    - [ ] Themeing
+    - [x] Themeing
     - [ ] Other configurations (keybinds, applications, rc.xml)
     - [ ] Menu - (obmenu-generator?)
