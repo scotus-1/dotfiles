@@ -42,6 +42,7 @@ applications + dependencies (install with aur helper)
 - cbonsai
 - unzip
 - lxpolkit-gtk3, polkit
+- picom-jonaburg-git
 
 other installations:
  - oh-my-zsh
@@ -58,7 +59,7 @@ other installations:
 
 todo:
 - [x] Display Server - Xorg
-- [ ] Window Compositor - picom (fork? jonaburg)
+- [x] Window Compositor - jonaburg/picom
 - [x] Display Manager - lightdm + aether
 - [x] Screen Locker - betterlockscreen
     - [ ] more i3lock-color options?
