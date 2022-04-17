@@ -287,7 +287,7 @@ colors:
     yellow:  '#FFC385'
     blue:    '#1FB3EA'
     magenta: '#B613DE'
-    cyan:    '#DB8ACF'
+    cyan:    '#1fb3ea'
     white:   '#F8FFEB'
 
   # Bright colors
