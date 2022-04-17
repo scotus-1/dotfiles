@@ -43,6 +43,7 @@ applications + dependencies (install with aur helper)
 - unzip
 - lxpolkit-gtk3, polkit
 - picom-jonaburg-git
+- mpd, ncmpcpp, mpv
 
 other installations:
  - oh-my-zsh
@@ -57,7 +58,7 @@ other installations:
 - $OWM_API_KEY
 - $ZIP_CODE_COUNTRY_CODE
 
-todo:
+todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
 - [x] Display Server - Xorg
 - [x] Window Compositor - jonaburg/picom
 - [x] Display Manager - lightdm + aether
@@ -69,7 +70,8 @@ todo:
     - [ ] connect to notifications
 - [x] Backlight control - brightnessctl, redshift
     - [ ] connect to notifications
-- [ ] Media control - (mpd, mpv, vlc ?????? playerctl?)
+- [x] Media control - mpd, ncmpcpp, mpv
+    - [ ] Openbox Keybinds - playerctl?
 - [ ] Panel/bar - polybar
 - [x] Polkit - lxpolkit-gtk3
 - [ ] Power Management - ???
