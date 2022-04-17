@@ -16,6 +16,7 @@
 #
 #xfce-mcs-manager &
 picom --experimental-backends &
+~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY &
+polybar &
 lxpolkit &
 redshift -O 4500 &
-~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY
