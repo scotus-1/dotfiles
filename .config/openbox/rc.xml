@@ -82,8 +82,8 @@
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuHeader">
-    <name>sans</name>
-    <size>9</size>
+    <name>altonasans</name>
+    <size>12</size>
     <!-- font size in points -->
     <weight>normal</weight>
     <!-- 'bold' or 'normal' -->
@@ -91,8 +91,8 @@
     <!-- 'italic' or 'normal' -->
   </font>
   <font place="MenuItem">
-    <name>sans</name>
-    <size>9</size>
+    <name>altonasans</name>
+    <size>11</size>
     <!-- font size in points -->
     <weight>normal</weight>
     <!-- 'bold' or 'normal' -->

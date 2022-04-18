@@ -85,7 +85,7 @@ window.inactive.button.toggled.hover.image.color: #222740
 # Menus
 menu.title.bg: Flat Solid
 menu.title.bg.color: #0E101A
-menu.title.text.color: #f45890
+menu.title.text.color: #1fb3ea
 menu.title.text.justify: Left
 
 menu.separator.color: #f45890
