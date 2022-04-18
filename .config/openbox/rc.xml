@@ -8,7 +8,7 @@
 
 <resistance>
   <strength>10</strength>
-  <screen_edge_strength>20</screen_edge_strength>
+  <screen_edge_strength>150</screen_edge_strength>
 </resistance>
 
 <focus>
@@ -166,9 +166,9 @@
      cases. -->
 <margins>
   <top>0</top>
-  <bottom>0</bottom>
-  <left>0</left>
-  <right>0</right>
+  <bottom>10</bottom>
+  <left>10</left>
+  <right>10</right>
 </margins>
 
 <dock>

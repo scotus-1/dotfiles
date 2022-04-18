@@ -44,6 +44,7 @@ applications + dependencies (install with aur helper)
 - lxpolkit-gtk3, polkit
 - picom-jonaburg-git
 - mpd, ncmpcpp, mpv
+- rofi
 
 other installations:
  - oh-my-zsh
@@ -65,6 +66,8 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Screen Locker - betterlockscreen
     - [ ] more i3lock-color options?
 - [ ] Application Launcher - rofi
+    - [ ] Themeing
+    - [ ] Openbox Keybinds
 - [ ] Notification Daemon - dunst
 - [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils
     - [ ] connect to notifications
