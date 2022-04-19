@@ -20,3 +20,4 @@ picom --experimental-backends &
 polybar &
 lxpolkit &
 redshift -O 4500 &
+zentile &

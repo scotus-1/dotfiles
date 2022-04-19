@@ -128,3 +128,5 @@ alias restart="sudo reboot now"
 alias shutdown="shutdown now"
 export GPG_TTY=$(tty)
 alias obreconf="openbox --reconfigure"
+alias btm="btm --battery"
+alias htop="bashtop"

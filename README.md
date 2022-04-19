@@ -45,7 +45,8 @@ applications + dependencies (install with aur helper)
 - picom-jonaburg-git
 - mpd, ncmpcpp, mpv
 - rofi
-
+- bashtop
+- zentile
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
