@@ -47,6 +47,9 @@ applications + dependencies (install with aur helper)
 - rofi
 - bashtop
 - zentile
+- networkmanager-applet networkmanager-openvpn networkmanager-dmenu
+    - go to protonvpn or something and download config for ovpn then add that to nm-applet and then add ovpn username and password in the extra options 
+
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
