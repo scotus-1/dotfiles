@@ -16,8 +16,10 @@
 #
 #xfce-mcs-manager &
 picom --experimental-backends &
+redshift -O 4500 &
 ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY &
 polybar &
+xfce4-power-manager &
 lxpolkit &
-redshift -O 4500 &
+clipcatd &
 zentile &

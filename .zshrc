@@ -114,6 +114,15 @@ alias ..='cd ..'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+if type clipcat-menu >/dev/null 2>&1; then
+    alias clipedit=' clipcat-menu --finder=builtin edit'
+    alias clipdel=' clipcat-menu --finder=builtin remove'
+
+    bindkey -s '^\' "^Q clipcat-menu --finder=builtin insert ^J"
+    bindkey -s '^]' "^Q clipcat-menu --finder=builtin remove ^J"
+fi
+
+
 alias cat=bat
 alias ls="exa -lah --group-directories-first"
 alias find=fd

@@ -49,6 +49,9 @@ applications + dependencies (install with aur helper)
 - zentile
 - networkmanager-applet networkmanager-openvpn networkmanager-dmenu
     - go to protonvpn or something and download config for ovpn then add that to nm-applet and then add ovpn username and password in the extra options 
+- tlp, tlp-rdw, xfce4-power-manager
+- clipcat
+- git-delta
 
 other installations:
  - oh-my-zsh
@@ -69,7 +72,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Display Manager - lightdm + aether
 - [x] Screen Locker - betterlockscreen
     - [ ] more i3lock-color options?
-- [ ] Application Launcher - rofi
+- [x] Application Launcher - rofi
     - [ ] Themeing
     - [ ] Openbox Keybinds
 - [ ] Notification Daemon - dunst
@@ -79,11 +82,13 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] connect to notifications
 - [x] Media control - mpd, ncmpcpp, mpv
     - [ ] Openbox Keybinds - playerctl?
-- [ ] Panel/bar - polybar
+    - [ ] connect to notifications
+- [x] Panel/bar - polybar
+    - [ ] Themeing and functionality
 - [x] Polkit - lxpolkit-gtk3
-- [ ] Power Management - ???
+- [x] Power Management - tlp, tlp-rdw, xfce4-power-manager
 - [ ] Screen capture - ???
-- [ ] Clipboard Management - ???
+- [x] Clipboard Management - clipcat
 - [x] Wallpaper Setter - feh
     - [x] React to weather and time
 - [ ] Logout Dialogue - ???
@@ -98,3 +103,4 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [x] Themeing
     - [ ] Other configurations (keybinds, applications, rc.xml)
     - [ ] Menu - (obmenu-generator?)
+- [ ] Bluetooth - ???
