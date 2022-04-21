@@ -52,7 +52,8 @@ applications + dependencies (install with aur helper)
 - tlp, tlp-rdw, xfce4-power-manager
 - clipcat
 - git-delta
-
+- oblogout
+    - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -91,7 +92,9 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Clipboard Management - clipcat
 - [x] Wallpaper Setter - feh
     - [x] React to weather and time
-- [ ] Logout Dialogue - ???
+- [x] Logout Dialogue - oblogout
+    - [ ] Themeing
+    - [ ] Keybind
 - [ ] Default Applications
     - [x] IDE - VS Code
     - [x] Term - Alacritty + zsh + oh-my-zsh
@@ -101,6 +104,6 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [ ] Sidebar Widgets - eww
 - [x] Window Manager - openbox
     - [x] Themeing
-    - [ ] Other configurations (keybinds, applications, rc.xml)
+    - [ ] Other configurations (rc.xml)
     - [ ] Menu - (obmenu-generator?)
 - [ ] Bluetooth - ???
