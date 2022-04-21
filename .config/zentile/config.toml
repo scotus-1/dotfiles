@@ -1,6 +1,7 @@
 # Window decorations will be removed if set to true
 remove_decorations = false
 
+ignore = ['oblogout']
 # Adds spacing between windows
 gap = 10
 

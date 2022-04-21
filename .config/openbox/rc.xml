@@ -334,6 +334,11 @@
        <command>amixer sset Master 1+ toggle -q</command>
     </action>
   </keybind>
+  <keybind key="W-r">
+    <action name="Execute">
+       <command>rofi -show drun -show-icons</command>
+    </action>
+  </keybind>
 </keyboard>
 
 <mouse>
