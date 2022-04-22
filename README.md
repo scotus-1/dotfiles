@@ -80,7 +80,9 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Application Launcher - rofi
     - [ ] Themeing
     - [ ] Openbox Keybinds
-- [ ] Notification Daemon - dunst
+- [x] Notification Daemon - dunst
+    - [ ] Themeing
+    - [ ] Extra Functionality
 - [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils, pulseaudio-bluetooth
     - [ ] Connect to notifications
     - [ ] Openbox Keybinds
