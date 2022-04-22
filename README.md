@@ -22,7 +22,7 @@ applications + dependencies (install with aur helper)
 - redshift
 - bat, exa, fd, cheat
 - alsa-utils
-- pulseaudio, pulseaudio-alsa
+- pulseaudio, pulseaudio-alsa, pulseaudio-bluetooth
 - polybar
 - jq, httpie
 - feh
@@ -54,6 +54,8 @@ applications + dependencies (install with aur helper)
 - git-delta
 - oblogout
     - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
+- blueman
+
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -77,7 +79,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Themeing
     - [ ] Openbox Keybinds
 - [ ] Notification Daemon - dunst
-- [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils
+- [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils, pulseaudio-bluetooth
     - [ ] connect to notifications
 - [x] Backlight control - brightnessctl, redshift
     - [ ] connect to notifications
@@ -106,4 +108,4 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [x] Themeing
     - [ ] Other configurations (rc.xml)
     - [ ] Menu - (obmenu-generator?)
-- [ ] Bluetooth - ???
+- [x] Bluetooth - blueman
