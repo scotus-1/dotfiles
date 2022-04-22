@@ -10,7 +10,7 @@ applications + dependencies (install with aur helper)
 - ttf-liberation
 - rsync
 - thefuck
-- xorg-server
+- xorg-server, xorg-xinput
 - zsh
 - gnome-keyring
 - bottom
@@ -55,6 +55,8 @@ applications + dependencies (install with aur helper)
 - oblogout
     - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
 - blueman
+- maim
+
 
 other installations:
  - oh-my-zsh
@@ -74,23 +76,27 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Window Compositor - jonaburg/picom
 - [x] Display Manager - lightdm + aether
 - [x] Screen Locker - betterlockscreen
-    - [ ] more i3lock-color options?
+    - [ ] Core i3lock-color options?
 - [x] Application Launcher - rofi
     - [ ] Themeing
     - [ ] Openbox Keybinds
 - [ ] Notification Daemon - dunst
 - [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils, pulseaudio-bluetooth
-    - [ ] connect to notifications
+    - [ ] Connect to notifications
+    - [ ] Openbox Keybinds
 - [x] Backlight control - brightnessctl, redshift
     - [ ] connect to notifications
 - [x] Media control - mpd, ncmpcpp, mpv
     - [ ] Openbox Keybinds - playerctl?
-    - [ ] connect to notifications
+    - [ ] Connect to notifications
 - [x] Panel/bar - polybar
     - [ ] Themeing and functionality
 - [x] Polkit - lxpolkit-gtk3
 - [x] Power Management - tlp, tlp-rdw, xfce4-power-manager
-- [ ] Screen capture - ???
+- [x] Screen capture - maim
+    - [ ] Openbox Keybinds
+    - [ ] Connect to notifications
+    - [ ] Extra Functionality (save to clipboard)
 - [x] Clipboard Management - clipcat
 - [x] Wallpaper Setter - feh
     - [x] React to weather and time
