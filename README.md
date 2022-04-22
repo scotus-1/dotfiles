@@ -56,7 +56,7 @@ applications + dependencies (install with aur helper)
     - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
 - blueman
 - maim
-
+- thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
 
 other installations:
  - oh-my-zsh
@@ -103,10 +103,12 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Logout Dialogue - oblogout
     - [ ] Themeing
     - [ ] Keybind
-- [ ] Default Applications
+- [x] Default Applications
     - [x] IDE - VS Code
+        - [ ] Custom Theme?
     - [x] Term - Alacritty + zsh + oh-my-zsh
-    - [ ] File Manager - ???
+    - [x] File Manager - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
+        - [ ] Themeing + Extra Functionality
     - [x] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
@@ -115,3 +117,5 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Other configurations (rc.xml)
     - [ ] Menu - (obmenu-generator?)
 - [x] Bluetooth - blueman
+- [ ] Misc.
+    - [ ] Gtk2/3 Theming
