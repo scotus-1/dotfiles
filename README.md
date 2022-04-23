@@ -57,7 +57,7 @@ applications + dependencies (install with aur helper)
 - blueman
 - maim
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
-
+- duf, bandwhich, fzf, lazygit
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -66,6 +66,7 @@ other installations:
     - powerline10k
  - toipe (cargo)
  - tor-browser (from site)
+ - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
 
 .uservar (secret env variables)
 - $OWM_API_KEY
