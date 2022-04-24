@@ -58,6 +58,7 @@ applications + dependencies (install with aur helper)
 - maim
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
 - duf, bandwhich, fzf, lazygit
+
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
