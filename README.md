@@ -58,6 +58,9 @@ applications + dependencies (install with aur helper)
 - maim
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
 - duf, bandwhich, fzf, lazygit
+- atom, nvm
+    - `nvm install node`
+    
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -67,6 +70,8 @@ other installations:
  - toipe (cargo)
  - tor-browser (from site)
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
+ - [Steam](https://wiki.archlinux.org/title/Steam)
+
 
 .uservar (secret env variables)
 - $OWM_API_KEY
@@ -121,4 +126,4 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Menu - (obmenu-generator?)
 - [x] Bluetooth - blueman
 - [ ] Misc.
-    - [ ] Gtk2/3 Theming
+    - [ ] Gtk2/3 Themeing - oomox/themix

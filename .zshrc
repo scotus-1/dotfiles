@@ -139,3 +139,5 @@ export GPG_TTY=$(tty)
 alias obreconf="openbox --reconfigure"
 alias btm="btm --battery"
 alias htop="bashtop"
+source /usr/share/nvm/init-nvm.sh
+
