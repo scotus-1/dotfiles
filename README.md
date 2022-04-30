@@ -60,7 +60,7 @@ applications + dependencies (install with aur helper)
 - duf, bandwhich, fzf, lazygit
 - atom, nvm
     - `nvm install node`
-    
+
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions
@@ -108,7 +108,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [x] Clipboard Management - clipcat
 - [x] Wallpaper Setter - feh
     - [x] React to weather and time
-- [x] Logout Dialogue - oblogout
+- [x] Logout Dialogue - oblogout (replace with rofi?)
     - [ ] Themeing
     - [ ] Keybind
 - [x] Default Applications
