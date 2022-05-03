@@ -60,7 +60,9 @@ applications + dependencies (install with aur helper)
 - duf, bandwhich, fzf, lazygit
 - atom, nvm
     - `nvm install node`
-
+- wtfutil
+- oneko
+- phinger-cursors
 other installations:
  - oh-my-zsh
     - zsh-autosuggestions

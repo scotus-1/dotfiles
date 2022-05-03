@@ -140,4 +140,4 @@ alias obreconf="openbox --reconfigure"
 alias btm="btm --battery"
 alias htop="bashtop"
 source /usr/share/nvm/init-nvm.sh
-
+alias oneko="oneko -tora -fg black -bg 'gold'  -speed 20"
