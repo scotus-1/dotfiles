@@ -123,22 +123,23 @@ if type clipcat-menu >/dev/null 2>&1; then
 fi
 
 
+
+export GPG_TTY=$(tty)
+export gh="https://github.com"
+
 alias cat=bat
 alias ls="exa -lah --group-directories-first"
 alias find=fd
 alias ping=gping
 alias rm="rm -i"
 alias mv="mv -i"
-export gh="https://github.com"
 alias lock="betterlockscreen --lock blur"
 alias hibernate="systemctl hibernate"
 alias sleep="systemctl suspend"
 alias restart="sudo reboot now"
 alias shutdown="shutdown now"
-export GPG_TTY=$(tty)
 alias obreconf="openbox --reconfigure"
 alias btm="btm --battery"
 alias htop="bashtop"
 source /usr/share/nvm/init-nvm.sh
 alias oneko="oneko -tora -fg black -bg 'gold'  -speed 20"
-export GPG_TTY=$(tty)

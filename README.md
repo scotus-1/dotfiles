@@ -14,7 +14,7 @@
 - sudo \| `sudo`
 - zsh \| `zsh`
     - oh-my-zsh, plugins and themes
-    - ```
+    - ```zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     gcl $gh/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     gcl $gh/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -23,7 +23,9 @@
     ```
 - lxqt-policykit \| `lxqt-policykit polkit`
 - fprint \| `fprintd`
-    - `for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done`
+    - ```zsh
+    for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done
+    ```
 
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
