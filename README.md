@@ -1,3 +1,8 @@
+#New Laptop - Arch3
+##Wayland and Pipewire
+
+
+
 applications + dependencies (install with aur helper)
 - alacritty
 - firefox
@@ -80,52 +85,49 @@ other installations:
 - $ZIP_CODE_COUNTRY_CODE
 
 todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
-- [x] Display Server - Xorg
-- [x] Window Compositor - jonaburg/picom
-- [x] Display Manager - lightdm + aether
-- [x] Screen Locker - betterlockscreen
+- [x] Display Server - ~~Xorg~~ Wayland
+- [x] Window Compositor - ~~jonaburg/picom~~ HyprLand
+- [ ] Display Manager - lightdm + aether
+- [ ] Screen Locker - betterlockscreen
     - [ ] Core i3lock-color options?
-- [x] Application Launcher - rofi
+- [ ] Application Launcher - rofi
     - [ ] Themeing
-    - [ ] Openbox Keybinds
-- [x] Notification Daemon - dunst
+    - [ ] ~~Openbox Keybinds~~
+- [ ] Notification Daemon - dunst
     - [ ] Themeing
     - [ ] Extra Functionality
-- [x] Audio control - pulseaudio, pulseaudio-alsa, alsa-utils, pulseaudio-bluetooth
+- [x] Audio control - ~~pulseaudio, pulseaudio-alsa, alsa-utils, pulseaudio-bluetooth~~ pipewire pipewire-alsa pipewire-pulse pipewire-jack
     - [ ] Connect to notifications
-    - [ ] Openbox Keybinds
-- [x] Backlight control - brightnessctl, redshift
+    - [ ] ~~Openbox Keybinds~~
+- [ ] Backlight control - brightnessctl, redshift
     - [ ] connect to notifications
-- [x] Media control - mpd, ncmpcpp, mpv
-    - [ ] Openbox Keybinds - playerctl?
+- [ ] Media control - mpd, ncmpcpp, mpv
+    - [ ] ~~Openbox Keybinds - playerctl?~~
     - [ ] Connect to notifications
-- [x] Panel/bar - polybar
+- [ ] Panel/bar - polybar
     - [ ] Themeing and functionality
-- [x] Polkit - lxpolkit-gtk3
-- [x] Power Management - tlp, tlp-rdw, xfce4-power-manager
-- [x] Screen capture - maim
-    - [ ] Openbox Keybinds
+- [ ] Polkit - lxpolkit-gtk3
+- [ ] Power Management - tlp, tlp-rdw, xfce4-power-manager
+- [ ] Screen capture - maim
+    - [ ] ~~Openbox Keybinds~~
     - [ ] Connect to notifications
     - [ ] Extra Functionality (save to clipboard)
-- [x] Clipboard Management - clipcat
-- [x] Wallpaper Setter - feh
+- [ ] Clipboard Management - clipcat
+- [ ] Wallpaper Setter - feh
     - [x] React to weather and time
-- [x] Logout Dialogue - oblogout (replace with rofi?)
+- [ ] Logout Dialogue - oblogout (replace with rofi?)
     - [ ] Themeing
     - [ ] Keybind
 - [x] Default Applications
-    - [x] IDE - VS Code
+    - [ ] IDE - VS Code
         - [ ] Custom Theme?
     - [x] Term - Alacritty + zsh + oh-my-zsh
-    - [x] File Manager - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
+    - [ ] File Manager - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
         - [ ] Themeing + Extra Functionality
-    - [x] Photo Editor - gimp
+    - [ ] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
-- [x] Window Manager - openbox
-    - [x] Themeing
-    - [ ] Other configurations (rc.xml)
-    - [ ] Menu - (obmenu-generator?)
-- [x] Bluetooth - blueman
+- [ ] ~~Window Manager - openbox~~
+- [ ] Bluetooth - blueman
 - [ ] Misc.
     - [ ] Gtk2/3 Themeing - oomox/themix
