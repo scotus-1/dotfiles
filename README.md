@@ -3,7 +3,7 @@
 
 
 
-###Applications + Dependencies (install with aur helper)
+### Applications + Dependencies (install with aur helper)
 
 #### Essential Arch System Stuff (just notes for installations)
 - Processor Microcode \| `amd-ucode`
@@ -14,7 +14,7 @@
 - sudo \| `sudo`
 - zsh \| `zsh`
     - oh-my-zsh, plugins and themes
-     
+
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
 - Alacritty \| `alacritty`
@@ -61,7 +61,7 @@
 
 
 
-
+#### other todo reference:
 - lightdm
 - lightdm-webkit-theme-aether
     - `sudo cp -r ~/.wallpapers /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers`
