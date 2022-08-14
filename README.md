@@ -1,5 +1,5 @@
-#New Laptop - Arch3
-##Wayland and Pipewire
+# New Laptop - Arch3
+#### Wayland and Pipewire
 
 
 
