@@ -6,7 +6,7 @@
 ### Applications + Dependencies (install with aur helper)
 
 #### Essential Arch System Stuff (just notes for installations)
-- Processor Microcode \| `amd-ucode`
+- Processor Microcode \| `amd-ucode` or other microcode packages
 - grub \| `grub efibootmgr`
 - linux \| `linux linux-firmware`
 - nano \| `nano nano-syntax-highlighting`
@@ -21,7 +21,9 @@
     gcl $gh/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
     gcl --depth=1 $gh/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
     ```
--SDDM \| `sddm-git`
+- lxqt-policykit \| `lxqt-policykit polkit`
+- fprint \| `fprintd`
+    - `for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done`
 
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
@@ -30,6 +32,8 @@
 - pipewire \| `pipewire lib32-pipewire pipewire-alsa pipewire-pulse pipewire-jack`
 - pavucontrol \| `pavucontrol`
 - xdg-user-dirs \| `xdg-user-dirs`
+    - `xdg-user-dirs-update`
+- SDDM \| `sddm-git`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
@@ -70,7 +74,6 @@
 
 
 #### other todo reference:
-- lightdm
 - lightdm-webkit-theme-aether
     - `sudo cp -r ~/.wallpapers /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers`
 - rsync
@@ -85,7 +88,6 @@
 - imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
-- lxpolkit-gtk3, polkit
 - mpd, ncmpcpp, mpv
 - rofi
 - networkmanager-applet networkmanager-openvpn networkmanager-dmenu
@@ -101,15 +103,9 @@
 - phinger-cursors
 
 other installations:
- - oh-my-zsh
-    - zsh-autosuggestions
-    - zsh-completions
-    - zsh-syntax-highlighting
-    - powerline10k
  - tor-browser (from site)
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
  - [Steam](https://wiki.archlinux.org/title/Steam)
-
 
 .uservar (secret env variables)
 - $OWM_API_KEY
@@ -137,13 +133,13 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Connect to notifications
 - [ ] Panel/bar - polybar
     - [ ] Themeing and functionality
-- [ ] Polkit - lxpolkit-gtk3
+- [x] Polkit - lxqt-policykit
 - [ ] Power Management - tlp, tlp-rdw, xfce4-power-manager
 - [ ] Screen capture - maim
     - [ ] ~~Openbox Keybinds~~
     - [ ] Connect to notifications
     - [ ] Extra Functionality (save to clipboard)
-- [ ] Clipboard Management - ~~clipcat~~ CopyQ
+- [x] Clipboard Management - ~~clipcat~~ CopyQ
 - [ ] Wallpaper Setter - feh
     - [x] React to weather and time
 - [ ] Logout Dialogue - oblogout (replace with rofi?)
@@ -158,7 +154,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
-- ~~[ ] Window Manager - openbox~~
+- [x] ~~ Window Manager - openbox~~
 - [ ] Bluetooth - blueman
 - [ ] Misc.
     - [ ] Gtk2/3 Themeing - oomox/themix
