@@ -141,3 +141,4 @@ alias btm="btm --battery"
 alias htop="bashtop"
 source /usr/share/nvm/init-nvm.sh
 alias oneko="oneko -tora -fg black -bg 'gold'  -speed 20"
+export GPG_TTY=$(tty)

@@ -14,6 +14,14 @@
 - sudo \| `sudo`
 - zsh \| `zsh`
     - oh-my-zsh, plugins and themes
+    - ```
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    gcl $gh/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    gcl $gh/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    gcl $gh/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
+    gcl --depth=1 $gh/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+    ```
+-SDDM \| `sddm-git`
 
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
@@ -108,9 +116,9 @@ other installations:
 - $ZIP_CODE_COUNTRY_CODE
 
 todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
-- [x] Display Server - ~~Xorg~~ Wayland
-- [x] Window Compositor - ~~jonaburg/picom~~ Hyprland
-- [ ] Display Manager - lightdm + aether
+- [x] Display Server - ~~Xorg~~ \| Wayland
+- [x] Window Compositor - ~~jonaburg/picom~~ \| Hyprland
+- [ ] Display Manager - ~~lightdm + aether~~ \| SDDM
 - [ ] Screen Locker - betterlockscreen
     - [ ] Core i3lock-color options?
 - [ ] Application Launcher - rofi
@@ -150,7 +158,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
-- [ ] ~~Window Manager - openbox~~
+- ~~[ ] Window Manager - openbox~~
 - [ ] Bluetooth - blueman
 - [ ] Misc.
     - [ ] Gtk2/3 Themeing - oomox/themix
