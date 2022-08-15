@@ -124,7 +124,7 @@ fi
 
 
 
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 export gh="https://github.com"
 
 alias cat=bat

@@ -14,7 +14,7 @@
 - sudo \| `sudo`
 - zsh \| `zsh`
     - oh-my-zsh, plugins and themes
-    - ```zsh
+    ```zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     gcl $gh/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     gcl $gh/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -23,7 +23,7 @@
     ```
 - lxqt-policykit \| `lxqt-policykit polkit`
 - fprint \| `fprintd`
-    - ```zsh
+    ```zsh
     for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done
     ```
 
@@ -35,7 +35,13 @@
 - pavucontrol \| `pavucontrol`
 - xdg-user-dirs \| `xdg-user-dirs`
     - `xdg-user-dirs-update`
-- SDDM \| `sddm-git`
+- SDDM \| `sddm-git plasma-framework`
+    ```zsh
+    sudo mkdir /etc/sddm.conf.d
+    sudo mv /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
+    sudo cp -r sweet/ /usr/share/sddm/themes 
+    ```
+    - edit default.conf and change to `Current=Sweet` in `[Theme]`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
