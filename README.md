@@ -8,10 +8,14 @@
 #### Essential Arch System Stuff (just notes for installations)
 - Processor Microcode \| `amd-ucode` or other microcode packages
 - grub \| `grub efibootmgr`
-- linux \| `linux linux-firmware`
+    - grub installation and make config for grub
+- linux \| `linux-zen linux-firmware`
+    - Enable color and ILoveCandy in /etc/pacman.conf
 - nano \| `nano nano-syntax-highlighting`
 - NetworkManager \| `networkmanager`
+    - Edit hosts file
 - sudo \| `sudo`
+    - `echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers` 
 - zsh \| `zsh`
     - oh-my-zsh, plugins and themes
     ```zsh
@@ -41,7 +45,7 @@
     sudo mv /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
     sudo cp -r sweet/ /usr/share/sddm/themes 
     ```
-    - edit default.conf and change to `Current=Sweet` in `[Theme]`
+    - Edit default.conf and change to `Current=Sweet` in `[Theme]`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
@@ -64,6 +68,7 @@
 - firefox \| `firefox`
 - tetrio \| `tetrio-desktop`
 - Visual Studio Code \| `visual-studio-code-bin`
+- [Waydroid](https://wiki.archlinux.org/title/Waydroid#Installation) \| `waydroid`
 
 #### Extra Stuff
 - cbonsai \| `cbonsai`
@@ -75,7 +80,7 @@
 - onefetch \| `onefetch`
 - thefuck \| `thefuck`
 - youtube-dl \| `youtube-dl`
-
+- sl \| `sl`
 
 
 
@@ -122,7 +127,7 @@ other installations:
 todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
 - [x] Display Server - ~~Xorg~~ \| Wayland
 - [x] Window Compositor - ~~jonaburg/picom~~ \| Hyprland
-- [ ] Display Manager - ~~lightdm + aether~~ \| SDDM
+- [x] Display Manager - ~~lightdm + aether~~ \| SDDM
 - [ ] Screen Locker - betterlockscreen
     - [ ] Core i3lock-color options?
 - [ ] Application Launcher - rofi
