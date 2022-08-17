@@ -46,11 +46,15 @@
     sudo cp -r sweet/ /usr/share/sddm/themes 
     ```
     - Edit default.conf and change to `Current=Sweet` in `[Theme]`
+- blueman \| `blueman`
+    - `sudo systemctl enable bluetooth.service --now`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
 - cronie \| `cronie`
-    - `*/15 * * * * source ~/.uservar && ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_APIKEY` 
+    - `sudo systemctl enable cronie.service`
+    - `crontab -e`
+    - `*/15 * * * * source ~/.uservar && ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_API_KEY` 
 - duf \| `duf`
 - exa \| `exa`
 - fd \| `fd`
@@ -81,8 +85,6 @@
 - thefuck \| `thefuck`
 - youtube-dl \| `youtube-dl`
 - sl \| `sl`
-
-
 
 
 
@@ -121,8 +123,8 @@ other installations:
  - [Steam](https://wiki.archlinux.org/title/Steam)
 
 .uservar (secret env variables)
-- $OWM_API_KEY
-- $ZIP_CODE_COUNTRY_CODE
+- OWM_API_KEY=api_key
+- ZIP_CODE_COUNTRY_CODE=zipcode,country
 
 todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
 - [x] Display Server - ~~Xorg~~ \| Wayland
@@ -153,7 +155,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Connect to notifications
     - [ ] Extra Functionality (save to clipboard)
 - [x] Clipboard Management - ~~clipcat~~ CopyQ
-- [ ] Wallpaper Setter - feh
+- [x] Wallpaper Setter - swaybg
     - [x] React to weather and time
 - [ ] Logout Dialogue - oblogout (replace with rofi?)
     - [ ] Themeing
@@ -167,7 +169,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
-- [x] ~~ Window Manager - openbox~~
-- [ ] Bluetooth - blueman
+- [x] ~~Window Manager - openbox~~
+- [x] Bluetooth - blueman
 - [ ] Misc.
     - [ ] Gtk2/3 Themeing - oomox/themix

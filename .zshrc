@@ -126,6 +126,7 @@ fi
 
 export GPG_TTY=$TTY
 export gh="https://github.com"
+export EDITOR=nano
 
 alias cat=bat
 alias ls="exa -lah --group-directories-first"
