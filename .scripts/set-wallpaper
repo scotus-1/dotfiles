@@ -11,11 +11,19 @@ elif [[ $hour -ge 12 && $hour -lt 18 ]]; then
     time='afternoon' 
 fi
 
-ZIPCODE=$1
-OWM_APIKEY=$2
-echo "ZIPCODE: $1"
-echo "OWM_APIKEY: $2"
-response=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_APIKEY`
+if [[ -f "$HOME/.uservar" ]]; then
+    echo "Found .uservar file"
+    source $HOME/.uservar
+    ZIPCODE=$ZIP_CODE_COUNTRY_CODE
+    OWM_API_KEY=$OWM_API_KEY
+else
+    ZIPCODE=$1
+    OWM_API_KEY=$2
+fi
+
+echo "ZIPCODE: $ZIPCODE"
+echo "OWM_API_KEY: $OWM_API_KEY"
+response=`http GET http://api.openweathermap.org/data/2.5/weather zip==$ZIPCODE appid==$OWM_API_KEY`
 echo "RESP: $response"
 weather_condition=`echo $response | jq '.weather' | jq '.[0].main' | sed 's/^.//;s/.$//'`
 echo "Fetched current weather condition (ul or blank means error): $weather_condition"
@@ -71,7 +79,7 @@ esac
 
 wallpaper_name="${wallpaper_name}_${time}"
 echo "Wallpaper match: $wallpaper_name"
-wallpapers=( $(fd $wallpaper_name ~/.wallpapers) )
+wallpapers=( $(fd $wallpaper_name $HOME/.wallpapers) )
 wallpaper=${wallpapers[RANDOM%${#wallpapers[@]}]}
 echo "Wallpaper: $wallpaper"
 echo "Display: $DISPLAY"

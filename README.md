@@ -54,7 +54,7 @@
 - cronie \| `cronie`
     - `sudo systemctl enable cronie.service`
     - `crontab -e`
-    - `*/15 * * * * source ~/.uservar && ~/.scripts/set-wallpaper $ZIP_CODE_COUNTRY_CODE $OWM_API_KEY` 
+    - `*/15 * * * * export WAYLAND_DISPLAY=wayland-0; ~/.scripts/set-wallpaper` 
 - duf \| `duf`
 - exa \| `exa`
 - fd \| `fd`
@@ -66,6 +66,9 @@
 - nodejs \| `nodejs nvm`
 - openssh \| `openssh`
 - unzip \| `unzip`
+- gping \| `gping`
+- rsync \| `rsync`
+- ttf-ms-fonts \| `ttf-ms-fonts`
 
 #### Applications
 - discord \| `discord`
@@ -85,7 +88,7 @@
 - thefuck \| `thefuck`
 - youtube-dl \| `youtube-dl`
 - sl \| `sl`
-
+- tldr  \| `tldr`
 
 
 #### other todo reference:
