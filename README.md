@@ -48,6 +48,10 @@
     - Edit default.conf and change to `Current=Sweet` in `[Theme]`
 - blueman \| `blueman`
     - `sudo systemctl enable bluetooth.service --now`
+- waybar \| `waybar`
+- mpd \| `mpd`
+    - `systemctl enable mpd.service --user --now`
+- ttf-ms-fonts \| `ttf-ms-fonts`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
@@ -68,7 +72,7 @@
 - unzip \| `unzip`
 - gping \| `gping`
 - rsync \| `rsync`
-- ttf-ms-fonts \| `ttf-ms-fonts`
+
 
 #### Applications
 - discord \| `discord`
@@ -76,6 +80,8 @@
 - tetrio \| `tetrio-desktop`
 - Visual Studio Code \| `visual-studio-code-bin`
 - [Waydroid](https://wiki.archlinux.org/title/Waydroid#Installation) \| `waydroid`
+- mpv \| `mpv`
+- ncmpcpp \| `ncmpcpp`
 
 #### Extra Stuff
 - cbonsai \| `cbonsai`
@@ -92,9 +98,6 @@
 
 
 #### other todo reference:
-- lightdm-webkit-theme-aether
-    - `sudo cp -r ~/.wallpapers /usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/img/wallpapers`
-- rsync
 - gnome-keyring
 - brightnessctl
 - visual-studio-code-bin
@@ -106,22 +109,17 @@
 - imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
-- mpd, ncmpcpp, mpv
 - rofi
 - networkmanager-applet networkmanager-openvpn networkmanager-dmenu
     - go to protonvpn or something and download config for ovpn then add that to nm-applet and then add ovpn username and password in the extra options 
 - tlp, tlp-rdw, xfce4-power-manager
 - oblogout
     - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
-- blueman
 - maim
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
-- wtfutil
-- oneko
 - phinger-cursors
 
 other installations:
- - tor-browser (from site)
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
  - [Steam](https://wiki.archlinux.org/title/Steam)
 
@@ -141,15 +139,15 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
 - [ ] Notification Daemon - dunst
     - [ ] Themeing
     - [ ] Extra Functionality
-- [x] Audio control - Pulseaudio
+- [x] Audio control - Pipewire
     - [ ] Connect to notifications
     - [ ] ~~Openbox Keybinds~~
 - [ ] Backlight control - brightnessctl, redshift
     - [ ] connect to notifications
-- [ ] Media control - mpd, ncmpcpp, mpv
+- [x] Media control - mpd, ncmpcpp, mpv
     - [ ] ~~Openbox Keybinds - playerctl?~~
     - [ ] Connect to notifications
-- [ ] Panel/bar - polybar
+- [x] Panel/bar - ~~polybar~~ \| waybar
     - [ ] Themeing and functionality
 - [x] Polkit - lxqt-policykit
 - [ ] Power Management - tlp, tlp-rdw, xfce4-power-manager
@@ -172,7 +170,7 @@ todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environ
     - [ ] Photo Editor - gimp
     - [x] Web browser - firefox ( hope to change later with more custom browser )
 - [ ] Sidebar Widgets - eww
-- [x] ~~Window Manager - openbox~~
 - [x] Bluetooth - blueman
 - [ ] Misc.
     - [ ] Gtk2/3 Themeing - oomox/themix
+
