@@ -52,6 +52,7 @@
 - mpd \| `mpd`
     - `systemctl enable mpd.service --user --now`
 - ttf-ms-fonts \| `ttf-ms-fonts`
+- noto-fonts \| `noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra`
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
@@ -98,18 +99,13 @@
 
 
 #### other todo reference:
-- gnome-keyring
-- brightnessctl
-- visual-studio-code-bin
 - redshift
-- polybar
 - feh
 - gimp
 - noto-fonts, noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 - imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
-- rofi
 - networkmanager-applet networkmanager-openvpn networkmanager-dmenu
     - go to protonvpn or something and download config for ovpn then add that to nm-applet and then add ovpn username and password in the extra options 
 - tlp, tlp-rdw, xfce4-power-manager
@@ -119,15 +115,15 @@
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
 - phinger-cursors
 
-other installations:
+#### Other Installations:
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
  - [Steam](https://wiki.archlinux.org/title/Steam)
 
-.uservar (secret env variables)
+#### .uservar (secret env. variables)
 - OWM_API_KEY=api_key
 - ZIP_CODE_COUNTRY_CODE=zipcode,country
 
-todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
+#### Todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
 - [x] Display Server - ~~Xorg~~ \| Wayland
 - [x] Window Compositor - ~~jonaburg/picom~~ \| Hyprland
 - [x] Display Manager - ~~lightdm + aether~~ \| SDDM
