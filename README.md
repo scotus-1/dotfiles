@@ -13,7 +13,8 @@
     - Enable color and ILoveCandy in /etc/pacman.conf
 - nano \| `nano nano-syntax-highlighting`
 - NetworkManager \| `networkmanager`
-    - Edit hosts file
+    - [Edit /etc/hosts](https://wiki.archlinux.org/title/Network_configuration#localhost_is_resolved_over_the_network)
+    - `systemctl enable NetworkManager`
 - sudo \| `sudo`
     - `echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers` 
 - zsh \| `zsh`
@@ -30,6 +31,15 @@
     ```zsh
     for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done
     ```
+- Add user \| `useradd -m $user; passwd $user; usermod -aG wheel,audio,video,optical,storage $user`
+- Install yay
+    ```zsh
+    pacman -S --needed --noconfirm base-devel
+    git clone https://aur.aurchlinux.org/yay.git
+    cd yay
+    makepkg -si
+    ```
+
 
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
