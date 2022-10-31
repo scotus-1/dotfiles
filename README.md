@@ -39,6 +39,11 @@
     cd yay
     makepkg -si
     ```
+- Add dotfiles and ssh \| `git openssh github-cli`
+    - Login to github \| `gh auth login`
+    - `ssh-keygen -t ed25519 -C "$email"; ssh-add ~/.ssh/id_ed25519`
+    - `gh ssh-key add ~/.ssh/id_ed25519.pub --title $hostname`
+    
 
 
 #### Desktop Environment Stuff
