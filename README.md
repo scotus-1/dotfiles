@@ -34,7 +34,7 @@
 - Add user \| `useradd -m $user; passwd $user; usermod -aG wheel,audio,video,optical,storage $user`
 - Install yay
     ```zsh
-    pacman -S --needed git base-devel
+    sudo pacman -S --needed git base-devel
     git clone https://aur.aurchlinux.org/yay.git
     cd yay
     makepkg -si
