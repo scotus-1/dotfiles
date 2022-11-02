@@ -8,7 +8,7 @@
 #### Essential Arch System Stuff (just notes for installations)
 - Processor Microcode \| `amd-ucode` or other microcode packages
 - linux \| `linux-zen linux-firmware`
-    - Enable Color and ILoveCandy in /etc/pacman.conf
+    - Enable Color and ILoveCandy + multilib  in /etc/pacman.conf
 - grub \| `grub efibootmgr`
     ```zsh
     grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
@@ -31,6 +31,8 @@
     gcl $gh/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
     gcl --depth=1 $gh/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
     rm .bash_history .bash_logout .bash_profile .bashrc .shell.pre-oh-my-zsh
+    mv .zshrc.pre-oh-my-zsh .zshrc
+    zsh
     ```
 - Install yay \| `git base-devel`
     ```zsh
@@ -39,7 +41,7 @@
     makepkg -si
     cd ..; rm -rf yay
     ```
-- Add dotfiles and ssh \| `openssh github-cli`
+- Add dotfiles and ssh/gpg \| `openssh github-cli`
     ```zsh
     gh auth login
     ssh-keygen -t ed25519 -C "$email"; ssh-add ~/.ssh/id_ed25519
@@ -47,7 +49,14 @@
     git clone https://github.com/scotus-1/dotfiles.git
     cd dotfiles; mv .git ../.dotfiles_git; mv .* ..
     cd ..; rmdir dotfiles
+    gpg --full-generate-key
+    gpg --list-secret-keys --keyid-format=long
+    git config --global user.signingkey $KEY
+    git config --global commit.gpgsign true
+    git config --global user.email "$email"
+    git config --global user.name "$name"
     ```
+    - Add gpg to GitHub \| `gpg --armor --export $KEYID`
 - Install everything else then reboot
 
     
@@ -64,7 +73,9 @@
     sudo systemctl enable sddm.service
     sudo mkdir /etc/sddm.conf.d
     sudo mv /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
-    sudo cp -r .themes/sweet/ /usr/share/sddm/themes 
+    sudo cp -r .themes/sweet/ /usr/share/sddm/themes
+    setfacl -m u:sddm:x ~/
+    setfacl -m u:sddm:r ~/.face.icon 
     ```
     - Edit default.conf and change to `Current=sweet` in `[Theme]`
 - blueman \| `blueman`
