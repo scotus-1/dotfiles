@@ -8,13 +8,14 @@
 #### Essential Arch System Stuff (just notes for installations)
 - Processor Microcode \| `amd-ucode` or other microcode packages
 - linux \| `linux-zen linux-firmware`
-    - Enable color and ILoveCandy in /etc/pacman.conf
+    - Enable Color and ILoveCandy in /etc/pacman.conf
 - grub \| `grub efibootmgr`
     ```zsh
     grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
     grub-mkconfig -o /boot/grub/grub.cfg
     ```
 - nano \| `nano nano-syntax-highlighting`
+- man \| `man`
 - NetworkManager \| `networkmanager`
     - [Edit /etc/hosts](https://wiki.archlinux.org/title/Network_configuration#localhost_is_resolved_over_the_network)
     - `systemctl enable NetworkManager`
@@ -47,7 +48,7 @@
     cd dotfiles; mv .git ../.dotfiles_git; mv .* ..
     cd ..; rmdir dotfiles
     ```
-- Install everything else
+- Install everything else then reboot
 
     
 #### Desktop Environment Stuff
@@ -60,11 +61,12 @@
     - `xdg-user-dirs-update`
 - SDDM \| `sddm-git plasma-framework`
     ```zsh
+    sudo systemctl enable sddm.service
     sudo mkdir /etc/sddm.conf.d
     sudo mv /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d/default.conf
-    sudo cp -r sweet/ /usr/share/sddm/themes 
+    sudo cp -r .themes/sweet/ /usr/share/sddm/themes 
     ```
-    - Edit default.conf and change to `Current=Sweet` in `[Theme]`
+    - Edit default.conf and change to `Current=sweet` in `[Theme]`
 - blueman \| `blueman`
     - `sudo systemctl enable bluetooth.service --now`
 - waybar \| `waybar`
@@ -92,7 +94,6 @@
 - delta \| `git-delta`
 - httpie \| `httpie`
 - jq \| `jq`
-- man \| `man`
 - nodejs \| `nodejs nvm`
 - openssh \| `openssh`
 - unzip \| `unzip`
@@ -107,6 +108,7 @@
 - Visual Studio Code \| `visual-studio-code-bin`
 - [Waydroid](https://wiki.archlinux.org/title/Waydroid#Installation) \| `waydroid`
 - mpv \| `mpv`
+- gimp \| `gimp`
 - ncmpcpp \| `ncmpcpp`
 
 
@@ -122,18 +124,15 @@
 - youtube-dl \| `youtube-dl`
 - sl \| `sl`
 - tldr  \| `tldr`
+- nvm \| `nvm`
 
 
 #### other todo reference:
 - redshift
 - feh
-- gimp
-- noto-fonts, noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
 - imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
-- networkmanager-applet networkmanager-openvpn networkmanager-dmenu
-    - go to protonvpn or something and download config for ovpn then add that to nm-applet and then add ovpn username and password in the extra options 
 - tlp, tlp-rdw, xfce4-power-manager
 - oblogout
     - `sudo ln ~/.config/oblogout.conf /etc/oblogout.conf`
