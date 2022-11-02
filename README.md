@@ -1,51 +1,55 @@
-# New Laptop - Arch3
+# ~~New Laptop~~ THE REBOOT - Arch4
 ## Wayland and Pipewire
 
 
 
-### Applications + Dependencies (install with aur helper)
+### Applications + Dependencies (Install with AUR helper)
 
 #### Essential Arch System Stuff (just notes for installations)
 - Processor Microcode \| `amd-ucode` or other microcode packages
-- grub \| `grub efibootmgr`
-    - grub installation and make config for grub
 - linux \| `linux-zen linux-firmware`
     - Enable color and ILoveCandy in /etc/pacman.conf
+- grub \| `grub efibootmgr`
+    ```zsh
+    grub-install --target=x86_64-efi --efi-directory=esp --bootloader-id=GRUB
+    grub-mkconfig -o /boot/grub/grub.cfg
+    ```
 - nano \| `nano nano-syntax-highlighting`
 - NetworkManager \| `networkmanager`
     - [Edit /etc/hosts](https://wiki.archlinux.org/title/Network_configuration#localhost_is_resolved_over_the_network)
     - `systemctl enable NetworkManager`
 - sudo \| `sudo`
     - `echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers` 
+- Add user (after arch-chroot) \| `useradd -m $user; passwd $user; usermod -aG wheel,audio,video,optical,storage $user`
+- **Reboot**
 - zsh \| `zsh`
-    - oh-my-zsh, plugins and themes
     ```zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     gcl $gh/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     gcl $gh/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     gcl $gh/zsh-users/zsh-completions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
     gcl --depth=1 $gh/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+    rm .bash_history .bash_logout .bash_profile .bashrc .shell.pre-oh-my-zsh
     ```
-- lxqt-policykit \| `lxqt-policykit polkit`
-- fprint \| `fprintd`
+- Install yay \| `git base-devel`
     ```zsh
-    for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done
-    ```
-- Add user \| `useradd -m $user; passwd $user; usermod -aG wheel,audio,video,optical,storage $user`
-- Install yay
-    ```zsh
-    sudo pacman -S --needed git base-devel
     git clone https://aur.aurchlinux.org/yay.git
     cd yay
     makepkg -si
+    cd ..; rm -rf yay
     ```
-- Add dotfiles and ssh \| `git openssh github-cli`
-    - Login to github \| `gh auth login`
-    - `ssh-keygen -t ed25519 -C "$email"; ssh-add ~/.ssh/id_ed25519`
-    - `gh ssh-key add ~/.ssh/id_ed25519.pub --title $hostname`
+- Add dotfiles and ssh \| `openssh github-cli`
+    ```zsh
+    gh auth login
+    ssh-keygen -t ed25519 -C "$email"; ssh-add ~/.ssh/id_ed25519
+    gh ssh-key add ~/.ssh/id_ed25519.pub --title $hostname
+    git clone https://github.com/scotus-1/dotfiles.git
+    cd dotfiles; mv .git ../.dotfiles_git; mv .* ..
+    cd ..; rmdir dotfiles
+    ```
+- Install everything else
+
     
-
-
 #### Desktop Environment Stuff
 - hyprland \| `hyprland-git`
 - Alacritty \| `alacritty`
@@ -68,6 +72,12 @@
     - `systemctl enable mpd.service --user --now`
 - ttf-ms-fonts \| `ttf-ms-fonts`
 - noto-fonts \| `noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra`
+- lxqt-policykit \| `lxqt-policykit polkit`
+- fprint \| `fprintd`
+    ```zsh
+    for finger in {left,right}-{thumb,{index,middle}-finger}; do fprintd-enroll -f "$finger" "$USER"; done
+    ```
+
 
 #### System Utilities (mainly terminal)
 - bat \| `bat`
@@ -98,6 +108,7 @@
 - [Waydroid](https://wiki.archlinux.org/title/Waydroid#Installation) \| `waydroid`
 - mpv \| `mpv`
 - ncmpcpp \| `ncmpcpp`
+
 
 #### Extra Stuff
 - cbonsai \| `cbonsai`
@@ -130,13 +141,16 @@
 - thunar, thunar-archive-plugin, thunar-media-tags-plugin, thunar-volman
 - phinger-cursors
 
+
 #### Other Installations:
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
  - [Steam](https://wiki.archlinux.org/title/Steam)
 
+
 #### .uservar (secret env. variables)
 - OWM_API_KEY=api_key
 - ZIP_CODE_COUNTRY_CODE=zipcode,country
+
 
 #### Todo [Arch Desktop Environment](https://wiki.archlinux.org/title/desktop_environment#Custom_environments):
 - [x] Display Server - ~~Xorg~~ \| Wayland
