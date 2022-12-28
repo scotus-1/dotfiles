@@ -46,7 +46,7 @@
     gh auth login
     ssh-keygen -t ed25519 -C "$email"; ssh-add ~/.ssh/id_ed25519
     gh ssh-key add ~/.ssh/id_ed25519.pub --title $hostname
-    git clone https://github.com/scotus-1/dotfiles.git
+    git clone git@github.com:scotus-1/dotfiles.git
     cd dotfiles; mv .git ../.dotfiles_git; mv .* ..
     cd ..; rmdir dotfiles
     gpg --full-generate-key
@@ -113,15 +113,23 @@
 
 
 #### Applications
-- discord \| `discord`
-- firefox \| `firefox`
-- tetrio \| `tetrio-desktop`
+- Discord \| `discord`
+- Firefox \| `firefox`
+- TETR.io \| `tetrio-desktop`
 - Visual Studio Code \| `visual-studio-code-bin`
 - [Waydroid](https://wiki.archlinux.org/title/Waydroid#Installation) \| `waydroid`
 - mpv \| `mpv`
 - gimp \| `gimp`
 - ncmpcpp \| `ncmpcpp`
-
+- KeePassXC \| `keepassxc`
+- rclone \| `rclone fuse`
+    - Using sudoedit edit `/etc/fuse.conf` and uncomment `#user_allow_other`
+    ```zsh
+    rclone config
+    mkdir ~/mnt/gdrive
+    systemctl --user daemon-reload
+    systemctl --user enable rclone@gdrive --now
+    ```
 
 #### Extra Stuff
 - cbonsai \| `cbonsai`
@@ -136,12 +144,12 @@
 - sl \| `sl`
 - tldr  \| `tldr`
 - nvm \| `nvm`
-
+- usbutils \| `usbutils`
+- imagemagick \| `imagemagick`
 
 #### other todo reference:
 - redshift
 - feh
-- imagemagick
 - betterlockscreen
     - `sudo ln -sf ~/.config/betterlockscreen@.service /usr/lib/systemd/system/betterlockscreen@.service`
 - tlp, tlp-rdw, xfce4-power-manager
