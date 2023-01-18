@@ -130,6 +130,8 @@
     systemctl --user daemon-reload
     systemctl --user enable rclone@gdrive --now
     ```
+- Steam \| `steam`
+    - Choose vulkan-radeon if available for AMD Chips
 
 #### Extra Stuff
 - cbonsai \| `cbonsai`
@@ -162,7 +164,6 @@
 
 #### Other Installations:
  - [Anime4K](https://github.com/bloc97/Anime4K/blob/master/md/GLSL_Instructions_Linux.md)
- - [Steam](https://wiki.archlinux.org/title/Steam)
 
 
 #### .uservar (secret env. variables)
