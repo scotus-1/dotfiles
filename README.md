@@ -41,6 +41,7 @@
     makepkg -si
     cd ..; rm -rf yay
     ```
+    - Enable multithreaded builds `MAKEPKG ="-j$(nproc)"` in `/etc/makepkg.conf`
 - Add dotfiles and ssh/gpg \| `openssh github-cli`
     ```zsh
     gh auth login

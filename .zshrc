@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -125,7 +125,7 @@ fi
 
 
 export GPG_TTY=$TTY
-export gh="https://github.com"
+export gh="git@github.com"
 export EDITOR=nano
 
 alias cat=bat
@@ -147,3 +147,5 @@ alias btm="btm --battery"
 alias htop="bashtop"
 source /usr/share/nvm/init-nvm.sh
 alias oneko="oneko -tora -fg black -bg 'gold'  -speed 20"
+source ~/.cargo/env
+alias sl="sl -5acFewd"
